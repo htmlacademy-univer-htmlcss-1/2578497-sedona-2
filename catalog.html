@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+
+  <body>
+    <header data-test="header" class="header">
+      <div class="logonav">
+        <a href="#">
+          <img src="images/logo.svg" width="140" height="70" alt="logo.">
+        </a>
+        <nav class="navigation">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="main-page">Главная</a></li>
+            <li class="nav-item"><a href="#" class="about-page">О седоне</a></li>
+            <li class="nav-item"><a href="#" class="hotels-page active-page">Гостиницы</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-icons">
+        <div class="search-like">
+          <a class="search-icon" href="#">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none">
+              <path fill="#000"
+                d="m18.5 17-3.7-3.7a8 8 0 0 0 1.7-4.8 8 8 0 1 0-3.1 6.3l3.7 3.7 1.4-1.5Zm-10-2.5a6 6 0 0 1-6-6 6 6 0 0 1 12 0 6 6 0 0 1-6 6Z" />
+            </svg>  -->
+            <img src="images/icons/search.svg" width="18" height="18" alt="search.">
+          </a>
+          <a href="#" class="li-ic">
+            <div class="likes-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                <path fill="#000"
+                  d="M8.9 17a1 1 0 0 1-.8-.4l-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.5 5.5 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5L9 14.4l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4a3.7 3.7 0 0 0-2.7-1.3 3.3 3.3 0 0 0-3.3 3.3c-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" />
+              </svg>
+              <!-- <img src="images/icons/heart.svg" width="18" height="17" alt="heart."> -->
+            </div>
+            <div class="likes-number"><span>12</span></div>
+          </a>
+        </div>
+        <a class="button" href="#">
+          <span class="header-button">Хочу сюда!</span>
+        </a>
+      </div>
+    </header>
+
+    <main data-test="main">
+      <section class="catalog-hotels">
+        <h2 class="visually-hidden" hidden>Список Гостиниц с фильтрами</h2>
+        <div class="filter-bg">
+          <div class="filter">
+            <div class="sedona-hotels">
+              <h1>Гостиницы Седоны</h1>
+              <ul class="breadcrumbs">
+                <li><a href="#" class="home-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none">
+                      <path fill="#fff" d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z" />
+                      <path fill="#fff" d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z" />
+                    </svg>
+                    <!-- <img src="images/icons/home.svg" width="12" height="12" alt="home."> -->
+                  </a></li>
+                <li class="in-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" fill="none">
+                    <path fill="#fff"
+                      d="M7 5 2.1.7C1.9.5 1.4.5 1 .7c-.3.3-.2.8 0 1l4.2 3.8-4 3.7c-.3.3-.3.8 0 1 0 .1.3.3.5.3l.5-.3L6.9 6c.4-.3.4-.8 0-1Z" />
+                  </svg>
+                  <!-- <img src="images/icons/v.svg" width="6.39px" height="9.94px" alt=">"> -->
+                </li>
+                <li><a href="#" class="txt-hotels"> Гостиницы </a></li>
+              </ul>
+            </div>
+
+            <!-- filters -->
+            <form data-test="filter" class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+              <div class="filters">
+                <!-- left -->
+                <div class="filter-lists">
+                  <!-- checkbox -->
+                  <fieldset class="catalog-filter-group infrastructure">
+                    <legend class="catalog-filter-title">Инфраструктура:</legend>
+                    <ul class="catalog-filter-list">
+                      <li class="checkbox">
+                        <label class="control">
+                          <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                          <span class="control-mark"></span>
+                          <span class="control-label">Бассейн</span>
+                        </label>
+                      </li>
+                      <li class="checkbox">
+                        <label class="control">
+                          <input class="visually-hidden control-input" type="checkbox" name="park" checked>
+                          <span class="control-mark"></span>
+                          <span class="control-label">Парковка</span>
+                        </label>
+                      </li>
+                      <li class="checkbox">
+                        <label class="control">
+                          <input class="visually-hidden control-input" type="checkbox" name="wifi">
+                          <span class="control-mark"></span>
+                          <span class="control-label">Wi-Fi</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <!-- radio -->
+                  <fieldset class="catalog-filter-group housing-type">
+                    <legend class="catalog-filter-title">Тип жилья:</legend>
+                    <ul class="catalog-filter-list">
+                      <li class="radio">
+                        <label class="control">
+                          <input class="visually-hidden control-input" type="radio" name="housing-type"
+                            value="Гостиница" checked>
+                          <span class="control-mark"></span>
+                          <span class="control-label">Гостиница</span>
+                        </label>
+                      </li>
+                      <li class="radio">
+                        <label class="control">
+                          <input class="visually-hidden control-input" type="radio" name="housing-type" value="Мотель">
+                          <span class="control-mark"></span>
+                          <span class="control-label">Мотель</span>
+                        </label>
+                      </li>
+                      <li class="radio">
+                        <label class="control">
+                          <input class="visually-hidden control-input" type="radio" name="housing-type"
+                            value="Апартаменты">
+                          <span class="control-mark"></span>
+                          <span class="control-label">Апартаменты</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </div>
+                <!-- end left -->
+
+                <!-- right -->
+                <div class="price">
+                  <fieldset class="price-slider">
+                    <legend>Стоимость, ₽:</legend>
+                    <div class="price-container">
+                      <div class="range-wrapper-inputs">
+                        <div class="set-price">
+                          <input class="range-min range-input" type="number" value="0" name="min-price" id="min">
+                          <label class="catalog-filter-label" for="min">от</label>
+                        </div>
+                        <div class="set-price">
+                          <input class="range-max range-input" type="number" value="9000" name="max-price" id="max">
+                          <label class="catalog-filter-label" for="max">до</label>
+                        </div>
+                      </div>
+
+                      <div class="range">
+                        <div class="range-scale">
+                          <div class="range-bar" style="left: -1.4px; width:226px">
+                            <button class="range-toggle toggle-min">
+                              <span class="visually-hidden">Минимальная цена.</span>
+                            </button>
+                            <button class="range-toggle toggle-max">
+                              <span class="visually-hidden">Максимальная цена.</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <div class="filter-buttons">
+                    <button type="submit">Применить</button>
+                    <button type="button">Сбросить</button>
+                  </div>
+                </div>
+                <!-- end right -->
+
+              </div>
+          </div>
+        </div>
+        </form>
+
+        <div data-test="catalog" class="catalog">
+          <div class="hotel-filter">
+            <h2>Найдено гостиниц: 38</h2>
+            <div class="h-filter">
+              <div class="sorting-container">
+                <select name="select-control" aria-label="Сортировка" class="select-control">
+                  <option value="cheap" class="dropdown-option" selected="selected">Сначала дешевые</option>
+                  <option value="expensive" class="dropdown-option">Сначала дорогие</option>
+                  <option value="popular" class="dropdown-option">Сначала популярние</option>
+                </select>
+              </div>
+              <div class="filter-imgs">
+                <div class="view-icon selected-view">
+                  <svg width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"
+                      fill="#000" />
+                  </svg>
+                  <!-- <img src="images/icons/View/view1.svg" width="16" height="14" alt="net view."> -->
+                </div>
+                <div class="view-icon">
+                  <svg width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" fill="#000" />
+                  </svg>
+                  <!-- <img src="images/icons/View/view2.svg" width="16" height="14" alt="icons view."> -->
+                </div>
+                <div class="view-icon">
+                  <svg width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"
+                      fill="#000" />
+                  </svg>
+                  <!-- <img src="images/icons/View/view3.svg" width="16" height="14" alt="list view."> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="hotels-catalog">
+            <li class="hotel">
+              <img src="images/hotels/hotel-1.jpg" alt="hotel1.">
+              <h3>Amara Resort & Spa</h3>
+              <div class="h-price">
+                <p>Гостиница</p>
+                <p>От 4000 ₽</p>
+              </div>
+              <div class="h-buttons">
+                <a class="button" href="#">подробнее</a>
+                <button type="button">в избранное</button>
+              </div>
+              <div class="hotel-stars">
+                <div class="stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                    <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                    <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                    <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                    <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" />
+                  </svg>
+                </div>
+                <p>Рейтинг: 8,5</p>
+              </div>
+            </li>
+            <li class="hotel">
+              <img src="images/hotels/hotel-2.jpg" alt="hotel2.">
+              <h3>Villas at Poco Diablo</h3>
+              <div class="h-price">
+                <p>Гостиница</p>
+                <p>От 5000 ₽</p>
+              </div>
+              <div class="h-buttons">
+                <a class="button" href="#">подробнее</a>
+                <button class="in-favorite" type="button">в избранном</button>
+              </div>
+              <div class="hotel-stars">
+                <div class="stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                    <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                    <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                    <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                    <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" />
+                  </svg>
+                </div>
+                <p>Рейтинг: 9,2</p>
+              </div>
+            </li>
+            <li class="hotel">
+              <img src="images/hotels/hotel-3.jpg" alt="hotel3.">
+              <h3>Desert Quail Inn</h3>
+              <div class="h-price">
+                <p>Гостиница</p>
+                <p>От 2500 ₽</p>
+              </div>
+              <div class="h-buttons">
+                <a class="button" href="#">подробнее</a>
+                <button type="button">в избранное</button>
+              </div>
+              <div class="hotel-stars">
+                <div class="stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                    <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                    <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                    <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" />
+                  </svg>
+                </div>
+                <p>Рейтинг: 6,9</p>
+              </div>
+            </li>
+            <li class="hotel">
+              <img src="images/hotels/hotel-4.jpg" alt="hotel4.">
+              <h3>GreenTree Inn</h3>
+              <div class="h-price">
+                <p>Гостиница</p>
+                <p>От 1500 ₽</p>
+              </div>
+              <div class="h-buttons">
+                <a class="button" href="#">подробнее</a>
+                <button type="button">в избранное</button>
+              </div>
+              <div class="hotel-stars">
+                <div class="stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                    <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+                    <path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" />
+                  </svg>
+                </div>
+                <p>Рейтинг: 5,0</p>
+              </div>
+            </li>
+          </ul>
+          <div class="divider"></div>
+          <div class="pagination">
+            <ul class="pagination-nums">
+              <li class="pagination-item"><a class="active" href="#">1</a></li>
+              <li class="pagination-item"><a href="#">2</a></li>
+              <li class="pagination-item"><a href="#">3</a></li>
+              <li class="pagination-item"><a href="#">4</a></li>
+              <li class="pagination-item">...</li>
+              <li class="pagination-item"><a href="#">10</a></li>
+            </ul>
+          </div>
+      </section>
+      <div data-test="subscribe" class="subscribe2">
+        <div class="sub2-content">
+          <div class="sub2-txt">
+            <h2>Подпишитесь на рассылку</h2>
+            <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+          </div>
+          <form class="sub2-form" action="https://echo.htmlacademy.ru/" method="get" id="f">
+            <label class="visually-hidden" for="email">Ваш e-mail:</label>
+            <input class="field" type="email" id="email" placeholder="Ваш e-mail">
+            <button type="submit"><span>Подписаться</span></button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer data-test="footer">
+      <div class="footer-elements">
+        <div class="social-media">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="15" fill="none">
+              <path fill="#83B3D3" fill-rule="evenodd"
+                d="M24.1 1.8c.2-.5 0-1-.8-1h-2.6c-.7 0-1 .4-1.1.8 0 0-1.4 3.2-3.3 5.3-.6.6-.9.8-1.2.8-.2 0-.4-.2-.4-.8V1.8c0-.7-.2-1-.8-1h-4c-.5 0-.8.4-.8.6 0 .7 1 .8 1 2.6v3.8c0 .8 0 1-.4 1-.9 0-3-3.3-4.3-7-.3-.7-.5-1-1.2-1H1.6c-.8 0-1 .4-1 .8 0 .7 1 4 4.2 8.5C7 13.2 10 15 12.8 15c1.7 0 1.9-.4 1.9-1v-2.4c0-.7.2-.8.7-.8.4 0 1 .1 2.6 1.6 1.8 1.8 2 2.6 3 2.6h2.7c.7 0 1.1-.4 1-1.1-.3-.8-1.2-1.8-2.3-3-.6-.8-1.5-1.5-1.8-2-.4-.4-.3-.6 0-1 0 0 3.2-4.5 3.5-6Z"
+                clip-rule="evenodd" />
+            </svg>
+            <!-- <img src="images/icons/Media/vk.svg" width="24" height="14" alt="VK."> -->
+          </a>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none">
+              <path fill="#83B3D3"
+                d="M16.8 1 .8 7c-1 .4-1 1-.2 1.3l4.1 1.3 9.5-6c.5-.3.9-.1.5.2l-7.6 7-.3 4.1c.4 0 .6-.2.8-.4l2-2 4.1 3.1c.8.5 1.3.3 1.5-.7L18 2.2c.3-1-.4-1.6-1.1-1.2Z" />
+            </svg>
+            <!-- <img src="images/icons/Media/tg.svg" width="18" height="15.1" alt="Telegram."> -->
+          </a>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="18" fill="none">
+              <path fill="#83B3D3"
+                d="M19 .4H3.4C1.6.4.3 2 .3 3.8v10c0 2 1.3 3.6 3.2 3.6h15.7c1.6 0 3.1-1.6 3.1-3.4V3.8C22.1 2 20.8.4 19 .4ZM8 12.9v-8l7.3 4-7.3 4Z" />
+            </svg>
+            <!-- <img src="images/icons/Media/youtube.svg" width="22" height="17" alt="YouTube."> -->
+          </a>
+        </div>
+        <div class="phone-num"><a href="tel:+7 (812) 812-12-12">+7 (812) 812-12-12</a></div>
+        <a href="#"><img src="images/HTML-Academy.svg" width="115" height="33" alt="HTML Academy"></a>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
